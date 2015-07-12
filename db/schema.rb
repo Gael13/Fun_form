@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711224922) do
+ActiveRecord::Schema.define(version: 20150712132042) do
+
+  create_table "fun_forms", force: :cascade do |t|
+    t.string   "quest1"
+    t.string   "quest2"
+    t.string   "quest3"
+    t.string   "quest4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "messages", force: :cascade do |t|
     t.text     "content"

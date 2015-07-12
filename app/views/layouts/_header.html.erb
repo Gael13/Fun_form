@@ -11,5 +11,12 @@
       <%= link_to "Laura's App", root_path, id: 'brand' %>
     </div>
 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right" style="margin-right:50px;">
+     
+            <li><%= link_to "Sign out", destroy_user_session_path, method: "delete" %></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
   </div><!-- /.container-fluid -->
 </nav>

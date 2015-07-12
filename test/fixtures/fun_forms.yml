@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  quest1: MyString
+  quest2: MyString
+  quest3: MyString
+  quest4: MyString
+
+two:
+  quest1: MyString
+  quest2: MyString
+  quest3: MyString
+  quest4: MyString

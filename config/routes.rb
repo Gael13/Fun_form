@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   delete 'destroy_message', to: 'home#destroy_message'
   post 'create_message', to: 'home#create_message'
+  post 'create_form', to: 'home#create_form'
 
   devise_for :users
   resources :messages

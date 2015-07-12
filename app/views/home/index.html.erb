@@ -7,10 +7,9 @@
     <h3 class="panel-title">Bienvenue sur ton application !</h3>
   </div>
   <div class="panel-body">
-    Panel content
-    <br>
-    Panel content
-    Panel content
+    Sur cette mini appli tu peux y voir quelques photos de Corse ainsi que certains endroits que j'ai vraiment apprécié et d'autres que j'aimerai faire. A droite, il y a un chat où tu peux me laisser un message ! Enfin, sous les photos, il y a quelques questions sur moi auxquelles tu dois répondre (ce n'est pas grave si tu as tout faux, c'est juste qu'on ira au pmu du coin ah ah ah)
+    Voilà ! Je me suis amusé à te créer cette appli en faisant une petit pause d'une heure (je voulais faire mon malin mais en fait j'ai mis plus de temps que ça). Ca m'a permis de réviser mes classiques !
+    Je n'ai pas encore eu le plaisir de te rencontrer en vrai, je sais que ce n'est jamais évident. En tout cas, je suis ravi d'avoir croisé ton chemin. J'ai voulu faire ça car je trouvais que tu étais différente des autres que j'ai rencontré.
   </div>
 </div>
 </div>
@@ -101,9 +100,42 @@
 
 <div class="row" style="margin: 10px 50px 20px 50px">
   <div class="col-md-12">
+    <%= simple_form_for @fun_form, url: create_form_path, method: :post do |f| %>
+  <div class="col-md-3">
+
+ <%= f.input :quest1, as: :radio_buttons, :collection => [["Egypte", 1], ["Thailande", 2], ["Canada", 3], ["Italie", 4]], required: true, include_blank: false, label: "Quel pays ai-je préféré ?" %>
+</div>
+
+<div class="col-md-3">
+
+ <%= f.input :quest3, as: :radio_buttons, :collection => [["Faire le tour du monde (tout en gérant ma startup", 1], ["Ouvrir un restaurant à l’autre bout du monde", 2], ["Avoir mon émission de télévision", 3]], required: true, include_blank: false, label: "Un de mes rêves"%>
+</div>
+
+<div class="col-md-3">
+
+ <%= f.input :quest4, as: :radio_buttons, :collection => [["Diamond", 1], ["Gold ", 2], ["Ruby ", 3], ["Silver", 4]], required: true, include_blank: false, label: "Comment s'appelle la technologie que j'utilise?" %>
+</div>
+
+<div class="col-md-3">
+
+ <%= f.input :quest2, as: :radio_buttons, :collection => [["Foie de chien", 1], ["Excréments de chat", 2], ["Cervelle de singe", 3]], required: true, include_blank: false, label: "Qu'est-ce que j'ai déjà goûté?" %>
+</div>
+
+
+</div>
+
+ <div style="margin-left: 30px;">
+ <%= f.submit "Send", :class => 'btn btn-info' %>
+</div>
+<% end %>
+</div>
+
+<div class="row" style="margin: 10px 50px 20px 50px">
+  <div class="col-md-12">
   <div class="col-md-4">
   	<h4>See you soon little mermaid !</h4>
   	<%= image_tag "gael_hello.jpg", width: '250px', height: '250px', style: 'border: 2px solid #bce8f1' %>
+    <p>(Et arrête de me regarder comme ça ! ce n'était même calculé que la petite sirène regarde dans ma direction lol)</p>
   </div>
   <div class="col-md-8">
   	<%= image_tag "petite_sirene.jpg", width: '680px', height: '420px', style: 'border: 2px solid #bce8f1' %>
