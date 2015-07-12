@@ -1,0 +1,6 @@
+<% for mess in message %>
+<li style="list-style:none;margin-left:-40px;">
+  <%= mess.content %>
+  <%= link_to "Delete", destroy_message_path(:id => mess.id), method: :delete %>
+</li>
+<% end %>

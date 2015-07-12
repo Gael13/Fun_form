@@ -1,0 +1,112 @@
+
+<div class="row" style="margin-left: 50px;">
+<div class="col-md-12">
+<div class="col-md-8">
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel title</h3>
+  </div>
+  <div class="panel-body">
+    Panel content
+    <br>
+    Panel content
+    Panel content
+  </div>
+</div>
+</div>
+
+<div class="col-md-4">
+  <h4>Chat</h4>
+
+<ul id="chat">
+  <%= render 'home/message', message: @messages %>
+  <%#= render @messages %>
+</ul>
+
+<%= simple_form_for :message, url: create_message_path, remote: true do |f| %>
+  
+  <div style="margin-right:80px;">
+    <%= f.input :content, label: false, input_html: { :class => "form-control" } %>
+  </div>
+
+  <div style="margin-top:5px;">
+    <%= f.submit "Send", :class => 'btn btn-info btn-xs' %>
+  </div>
+<% end %>
+
+</div>
+</div>
+
+</div>
+
+<div class="row" style="margin: 10px 50px 20px 50px;">
+  <div class="col-md-12">
+  <div class="col-md-4">
+  	<%= image_tag "eglise.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  <div class="col-md-4">
+  	<%= image_tag "chambre_corse.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  <div class="col-md-4">
+  	<%= image_tag "overview.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  </div>
+</div>
+
+
+<div class="row" style="margin: 10px 50px 20px 50px">
+  <div class="col-md-12">
+  <div class="col-md-4">
+  	<%= image_tag "piscine_villa.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  <div class="col-md-4">
+  	<%= image_tag "plage.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  <div class="col-md-4">
+  	<%= image_tag "tennis_corse.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  </div>
+</div>
+
+
+<div class="row" style="margin: 10px 50px 20px 50px">
+  <div class="col-md-12">
+  <div class="col-md-4">
+  	<%= image_tag "disney_world.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  <div class="col-md-4">
+  	<%= image_tag "new_york.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  <div class="col-md-4">
+  	<%= image_tag "mexique.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  </div>
+</div>
+
+
+
+<div class="row" style="margin: 10px 50px 20px 50px">
+  <div class="col-md-12">
+  <div class="col-md-4">
+  	<%= image_tag "khophiphi.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  <div class="col-md-4">
+  	<%= image_tag "egypte.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  <div class="col-md-4">
+  	<%= image_tag "lisbonne.jpg", width: '320px', height: '220px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  </div>
+</div>
+
+<div class="row" style="margin: 10px 50px 20px 50px">
+  <div class="col-md-12">
+  <div class="col-md-4">
+  	<h4>See you soon little mermaid !</h4>
+  	<%= image_tag "gael_hello.jpg", width: '250px', height: '250px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  <div class="col-md-8">
+  	<%= image_tag "petite_sirene.jpg", width: '680px', height: '420px', style: 'border: 2px solid #bce8f1' %>
+  </div>
+  </div>
+</div>
